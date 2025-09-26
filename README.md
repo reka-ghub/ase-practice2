@@ -10,6 +10,8 @@ See https://github.com/ftsrg-edu/ase-labs/wiki/Practice-2a
 
 ## Overview
 
+[![Continuous Integration](https://github.com/reka-ghub/ase-practice2/actions/workflows/ci.yml/badge.svg?branch=main&event=push)](https://github.com/reka-ghub/ase-practice2/actions/workflows/ci.yml)
+
 The recurring algorithmic problem used in this practice is a simple method of estimating **similarity of text documents**, which forms the basis of various text mining techniques used in industry for detecting plagiarism, giving automated recommendations, finding related documents in a large repository, or classifying documents based on language and/or stylistic similarities within a language.
 
 Documents are processed as a sequence of **tokens**, where the **granularity** of tokens can either be whole words or individual characters. An **n-gram** is just a sequence of n consecutive tokens (characters or words) occurring in a document; very often, bigrams (*n* = 2) or trigrams (*n* = 3) are used. If adjacent n-grams collected from a **block** of text are allowed to overlap, they are called **shingles**, named after the overlapping ceramic shingles (tiles) that cover rooftops. So with e.g. *n* = 4 and word-level granularity, the first four words (words no. 0-3) will form a shingle, words no. 1-4 form another one, as do words no. 2-5, etc., as a sliding window. Additionally, the first three words also count as an **incomplete** shingle, and so do the last three words; the first two words and the last two words are likewise shingles, and finally the first word as well as the last word are single-token shingles as well.
